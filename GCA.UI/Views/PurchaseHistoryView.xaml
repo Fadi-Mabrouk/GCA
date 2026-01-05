@@ -16,6 +16,8 @@
         <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="0,0,0,20">
             <TextBlock Text="Purchase History (Restocks)" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,20,0"/>
             <Button Content="Refresh" Command="{Binding LoadDataCommand}" Margin="10,0,0,0" Padding="15,5"/>
+            <Button Content="👁 View Details" Command="{Binding ViewDetailsCommand}" Margin="10,0,0,0" Padding="15,5"/>
+            <Button Content="🖨 Print Invoice" Command="{Binding PrintInvoiceCommand}" Margin="10,0,0,0" Padding="15,5"/>
         </StackPanel>
 
         <DataGrid Grid.Row="1" ItemsSource="{Binding Purchases}" SelectedItem="{Binding SelectedPurchase}" AutoGenerateColumns="False" CanUserAddRows="False" IsReadOnly="True" SelectionMode="Single">
