@@ -27,13 +27,13 @@ namespace GCA.Tests
             using (var context = GetInMemoryContext(dbName))
             {
                 var service = new StockService(context);
-                var category = new Category { Name = "TestCat" };
+                var category = new Category { Name = "makina" };
                 context.Categories.Add(category);
                 await context.SaveChangesAsync();
 
                 var part = new Part 
                 { 
-                    Name = "Test Part", 
+                    Name = "chakmon", 
                     CategoryId = category.Id,
                     UnitPrice = 10m,
                     Quantity = 5
@@ -48,8 +48,8 @@ namespace GCA.Tests
             {
                 Assert.Equal(1, await context.Parts.CountAsync());
                 var savedPart = await context.Parts.Include(p => p.Category).FirstAsync();
-                Assert.Equal("Test Part", savedPart.Name);
-                Assert.Equal("TestCat", savedPart.Category.Name);
+                Assert.Equal("chakmon", savedPart.Name);
+                Assert.Equal("makina", savedPart.Category.Name);
                 Assert.NotNull(savedPart.CreatedAt);
             }
         }

@@ -68,8 +68,8 @@
         </UniformGrid>
 
         <Grid Grid.Row="2">
-            <!-- Add Charts or Lists here in future -->
-            <TextBlock Text="More detailed reports coming soon..." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic"/>
+            <!-- continuation detail extra -->
+            <TextBlock Text="..." Foreground="Gray" HorizontalAlignment="Center" VerticalAlignment="Center" FontStyle="Italic"/>
         </Grid>
     </Grid>
 </UserControl>
