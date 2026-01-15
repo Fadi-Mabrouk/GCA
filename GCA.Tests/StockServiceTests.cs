@@ -50,7 +50,7 @@ namespace GCA.Tests
                 var savedPart = await context.Parts.Include(p => p.Category).FirstAsync();
                 Assert.Equal("chakmon", savedPart.Name);
                 Assert.Equal("makina", savedPart.Category.Name);
-                Assert.NotNull(savedPart.CreatedAt);
+                Assert.True(savedPart.CreatedAt > DateTime.MinValue);
             }
         }
 
